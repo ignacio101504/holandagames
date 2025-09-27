@@ -159,33 +159,24 @@
     ✍️ Escribinos apretando el botón de acá abajo
   </p>
 
+  <!-- BOTÓN PRINCIPAL CON TRACKING -->
   <a class="whatsapp-button" 
      href="https://wa.me/5491128928803?text=Hola%2C%20quiero%20mi%20bono%20del%20200%25"  
-     target="_blank">
+     target="_blank"
+     onclick="fbq('trackCustom', 'ClickWhatsApp')">
     💬 WHATSAPP OFICIAL
   </a>
 
+  <!-- BOTÓN SECUNDARIO CON TRACKING -->
   <a class="extra-button" 
      href="https://wa.me/5491151544554?text=Hola%2C%20quiero%20mi%20bono%20del%20200%25"  
-     target="_blank">
+     target="_blank"
+     onclick="fbq('trackCustom', 'ClickWhatsApp')">
     🚀 TRIPLICAR MI CARGA
   </a>
 
   <div class="footer">
     🎁¡Triplicá tu carga AHORA por WhatsApp!🎁
   </div>
-
-  <!-- Script para trackear clicks -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Seleccionamos todos los botones de WhatsApp
-      var botones = document.querySelectorAll('.whatsapp-button, .extra-button');
-      botones.forEach(function(btn){
-        btn.addEventListener('click', function() {
-          fbq('trackCustom', 'ClickWhatsapp');
-        });
-      });
-    });
-  </script>
 </body>
 </html>
