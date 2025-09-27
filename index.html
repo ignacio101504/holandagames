@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsApp Bonos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #111, #1c1c1c);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 150px; /* tamaño grande/moderado del logo */
+      height: auto;
+      margin: 20px 0;
+      /* Se elimina resplandor y animación */
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #00ff99;
+      text-shadow: 0 0 10px rgba(0,255,153,0.5);
+    }
+
+    .mensaje-bono {
+      background: #222;
+      border: 1px solid #333;
+      padding: 14px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #00ff99;
+      font-size: 18px;
+    }
+
+    /* BOTÓN PRINCIPAL VERDE */
+    .whatsapp-button {
+      background: linear-gradient(135deg, #00e676, #1de9b6);
+      color: white;
+      padding: 14px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 18px;
+      box-shadow: 0 0 15px #25d366;
+      animation: pulseGreen 1.8s infinite alternate;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    @keyframes pulseGreen {
+      0% { box-shadow: 0 0 10px #25d366; }
+      100% { box-shadow: 0 0 25px #00ff99; }
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.05);
+    }
+
+    /* BOTÓN SECUNDARIO AZUL */
+    .extra-button {
+      background: linear-gradient(135deg, #007bff, #4dabff);
+      color: white;
+      padding: 14px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 15px auto 0;
+      box-shadow: 0 0 15px rgba(0,123,255,0.6);
+      animation: pulseBlue 1.8s infinite alternate;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    @keyframes pulseBlue {
+      0% { box-shadow: 0 0 10px rgba(0,123,255,0.6); }
+      100% { box-shadow: 0 0 25px rgba(0,123,255,1); }
+    }
+
+    .extra-button:hover {
+      transform: scale(1.05);
+    }
+
+    .clientes {
+      background-color: #00c9a7;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      margin: 20px auto;
+      max-width: 400px;
+    }
+
+    .instruccion {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: -10px;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    /* FOOTER VERDE FIJO */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(to right, #00d084, #25d366);
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Logo WhatsApp pelado, sin resplandor -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+         alt="WhatsApp Logo" />
+    <h1>BONO DEL 200% EXTRA CON TU PRIMER CARGA</h1>
+  </header>
+
+  <div class="mensaje-bono">
+    💥Cargas $2000 te damos $6000💥<br/>
+  </div>
+
+  <p class="instruccion">
+    ✍️ Escribinos apretando el botón de acá abajo
+  </p>
+
+  <!-- BOTÓN PRINCIPAL -->
+  <a class="whatsapp-button" 
+     href="https://wa.me/5491128928803?text=Hola%2C%20quiero%20mi%20bono%20del%20200%25"  
+     target="_blank">
+    💬 WHATSAPP OFICIAL
+  </a>
+
+  <!-- BOTÓN SECUNDARIO -->
+  <a class="extra-button" 
+     href="https://wa.me/5491151544554?text=Hola%2C%20quiero%20mi%20bono%20del%20200%25"  
+     target="_blank">
+    🚀 TRIPLICAR MI CARGA
+  </a>
+
+  <div class="footer">
+    🎁¡Triplicá tu carga AHORA por WhatsApp!🎁
+  </div>
+</body>
+</html>
