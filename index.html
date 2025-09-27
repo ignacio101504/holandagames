@@ -6,7 +6,23 @@
   <title>WhatsApp Bonos</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Meta Pixel Code --> <script> !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src='https://connect.facebook.net/en_US/fbevents.js'; s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script'); fbq('init', '582357801126295'); fbq('track', 'PageView'); </script> <noscript> <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=582357801126295&ev=PageView&noscript=1"/> </noscript> <!-- End Meta Pixel Code -->
+  <!-- Meta Pixel Code --> 
+  <script> 
+    !function(f,b,e,v,n,t,s) {
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src='https://connect.facebook.net/en_US/fbevents.js';
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script'); 
+    fbq('init', '582357801126295'); 
+    fbq('track', 'PageView'); 
+  </script> 
+  <noscript> 
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=582357801126295&ev=PageView&noscript=1"/> 
+  </noscript> 
+  <!-- End Meta Pixel Code -->
 
   <style>
     body {
@@ -22,10 +38,9 @@
     }
 
     header img {
-      width: 150px; /* tamaño grande/moderado del logo */
+      width: 150px; 
       height: auto;
       margin: 20px 0;
-      /* Se elimina resplandor y animación */
     }
 
     h1 {
@@ -47,7 +62,6 @@
       font-size: 18px;
     }
 
-    /* BOTÓN PRINCIPAL VERDE */
     .whatsapp-button {
       background: linear-gradient(135deg, #00e676, #1de9b6);
       color: white;
@@ -74,7 +88,6 @@
       transform: scale(1.05);
     }
 
-    /* BOTÓN SECUNDARIO AZUL */
     .extra-button {
       background: linear-gradient(135deg, #007bff, #4dabff);
       color: white;
@@ -119,7 +132,6 @@
       font-style: italic;
     }
 
-    /* FOOTER VERDE FIJO */
     .footer {
       position: fixed;
       bottom: 0;
@@ -135,9 +147,7 @@
 </head>
 <body>
   <header>
-    <!-- Logo WhatsApp pelado, sin resplandor -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-         alt="WhatsApp Logo" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
     <h1>BONO DEL 200% EXTRA CON TU PRIMER CARGA</h1>
   </header>
 
@@ -149,14 +159,12 @@
     ✍️ Escribinos apretando el botón de acá abajo
   </p>
 
-  <!-- BOTÓN PRINCIPAL -->
   <a class="whatsapp-button" 
      href="https://wa.me/5491128928803?text=Hola%2C%20quiero%20mi%20bono%20del%20200%25"  
      target="_blank">
     💬 WHATSAPP OFICIAL
   </a>
 
-  <!-- BOTÓN SECUNDARIO -->
   <a class="extra-button" 
      href="https://wa.me/5491151544554?text=Hola%2C%20quiero%20mi%20bono%20del%20200%25"  
      target="_blank">
@@ -166,5 +174,18 @@
   <div class="footer">
     🎁¡Triplicá tu carga AHORA por WhatsApp!🎁
   </div>
+
+  <!-- Script para trackear clicks -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Seleccionamos todos los botones de WhatsApp
+      var botones = document.querySelectorAll('.whatsapp-button, .extra-button');
+      botones.forEach(function(btn){
+        btn.addEventListener('click', function() {
+          fbq('trackCustom', 'ClickWhatsapp');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
